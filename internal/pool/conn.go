@@ -25,6 +25,7 @@ type Conn struct {
 	createdAt time.Time
 }
 
+// 创建连接
 func NewConn(netConn net.Conn) *Conn {
 	cn := &Conn{
 		netConn:   netConn,
