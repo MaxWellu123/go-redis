@@ -29,6 +29,7 @@ func main() {
 	topK(ctx, rdb)
 }
 
+// 布隆过滤器
 func bloomFilter(ctx context.Context, rdb *redis.Client) {
 	inserted, err := rdb.Do(ctx, "BF.ADD", "bf_key", "item0").Bool()
 	if err != nil {
